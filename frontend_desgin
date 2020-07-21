@@ -1,7 +1,52 @@
-  <LinearLayout
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:weightSum="5"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/in"
+        android:background="@drawable/rippele_sym"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:gravity="end|bottom"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:maxLines="1"
+        android:layout_margin="3dp"
+        android:text="10+5"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/out"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/rippele_sym"
+        android:gravity="end|center"
+        android:maxLines="1"
+        android:text="15"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+<HorizontalScrollView
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -11,14 +56,14 @@
 
             <Button
                 android:id="@+id/clear"
-                android:background="@drawable/rippele_num"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_margin="3dp"
                 android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/rippele_num"
+                android:text="c"
                 android:textColor="@color/white"
-                android:textSize="30sp"
-                android:text="c"/>
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/backet_open"
@@ -250,15 +295,285 @@
 
             <Button
                 android:id="@+id/equal"
-                android:background="@drawable/gradent"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_margin="3dp"
                 android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/gradent"
+                android:text="@string/equal"
                 android:textColor="@color/white"
-                android:textSize="30sp"
-                android:text="@string/equal" />
+                android:textSize="30sp" />
         </LinearLayout>
 
-
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/divided_by"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rippele_num"
+                    android:text="1/x"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/square"
+                    android:layout_margin="3dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rippele_num"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:text="x^2" />
+
+                <Button
+                    android:id="@+id/cube"
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rippele_num"
+                    android:text="x^3"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/YpowerX"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rippele_num"
+                    android:text="y^x"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/factorial"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:text="x!" />
+
+                <Button
+                    android:id="@+id/underRoot"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:text="√x" />
+
+                <Button
+                    android:id="@+id/XrootofY"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:text="x√y" />
+
+                <Button
+                    android:id="@+id/log"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:text="lg" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sin"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:text="sin" />
+
+                <Button
+                    android:id="@+id/cos"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:text="cos" />
+
+                <Button
+                    android:id="@+id/tan"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:text="tan" />
+
+                <Button
+                    android:id="@+id/ln"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:text="ln" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sinh"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:text="sinh" />
+
+                <Button
+                    android:id="@+id/cosh"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:text="tanh" />
+
+                <Button
+                    android:id="@+id/tanh"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:text="tanx" />
+
+                <Button
+                    android:id="@+id/epowerx"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:text="e^x" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/tenPowerx"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:text="10^x" />
+
+                <Button
+                    android:id="@+id/pi"
+                    android:background="@drawable/rippele_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:text="π" />
+
+                <Button
+                    android:id="@+id/Rad"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rippele_num"
+                    android:scaleType="centerInside"
+                    android:text="Rad"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/Rand"
+                    android:background="@drawable/gradent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:text="Rand" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</HorizontalScrollView>
+</LinearLayout>
+
+
+
